@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "180644345442",
+    "project_id": "intro-mobile-flutter",
+    "storage_bucket": "intro-mobile-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180644345442:android:c053c565af7ab4cb1e433b",
+        "android_client_info": {
+          "package_name": "com.example.intro_mobile_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJx4p59PESTjhOo7W3cwxWo6osnRAn8uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

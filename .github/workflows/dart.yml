@@ -1,0 +1,45 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Dart
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: '3.1'
+
+      - name: Setup Flutter SDK
+        uses: flutter-actions/setup-flutter@v2
+        with:
+          channel: stable
+          version: 3.0.2
+
+      - name: Upgrade Flutter & Dart
+        run: flutter upgrade
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Update dependencies
+        run: flutter pub upgrade
+
+      # - name: Analyze project source
+      #   run: dart analyze
+
+      # - name: Run tests
+      #   run: flutter test
